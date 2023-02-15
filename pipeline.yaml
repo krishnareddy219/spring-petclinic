@@ -1,0 +1,13 @@
+pool: 
+  name: ubuntu-latest
+trigger:
+  - main
+
+steps:
+  - task: Maven@4
+    inputs:
+      mavenPOMFile: 'pom.xml'
+      goals: 'package'
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
+      javaHomeOption: '1.17'
+      mavenDirectory: /spring-petclinic
