@@ -5,12 +5,10 @@ trigger:
   - main
 
 steps:
-  - task: Maven@3
+  - task: Maven@4
     inputs:
       mavenPOMFile: 'pom.xml'
       goals: 'package'
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
-      javaHomeOption: '1.17'
-      mavenDirectory: /spring-petclinic
-
-    
+      javaHomeOption: 'Path'
+      jdkDirectory: '/usr/lib/jvm/java-17-openjdk-amd64'
