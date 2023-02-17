@@ -12,4 +12,4 @@ steps:
       javaHomeOption: 'Path'
       jdkDirectory: '/usr/lib/jvm/java-17-openjdk-amd64'
       mavenVersionOption: 'path'
-      mavenDirectory: '/home/ubuntu/springpetclinic'
+      mavenDirectory: '/home/ubuntu/spring-petclinic'
