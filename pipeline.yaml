@@ -10,6 +10,6 @@ steps:
       goals: 'package'
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       javaHomeOption: 'Path'
-      jdkDirectory: '/usr/lib/jvm/java-17-openjdk-amd64'
+      jdkDirectory: /usr/lib/jvm/java-17-openjdk-amd64
       mavenVersionOption: 'path'
-      mavenDirectory: '/home/ubuntu/spring-petclinic'
+      mavenDirectory: /home/ubuntu/spring-petclinic
