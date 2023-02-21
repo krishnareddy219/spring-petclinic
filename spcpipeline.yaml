@@ -3,6 +3,7 @@ pool:
 trigger: 
   - main
 
-extends:
-  template: spctemplate.yaml
+steps:
+  extends:
+    template: spctemplate.yaml
 
