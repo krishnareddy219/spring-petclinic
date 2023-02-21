@@ -1,0 +1,29 @@
+Parameters:
+  - name: pompath
+    displayName: pomfilepath
+    type: string 
+    default: pom.xml
+  - name: goal
+    displayName: goal
+    type: string 
+    default: package
+  - name: jdk_path
+    displayName: java-path
+    type: string 
+    default: /usr/lib/jvm/java-17-openjdk-amd64
+  - name: mavenpath
+    displayName: maven-path
+    type: string 
+    default: /home/ubuntu/spring-petclinic
+
+steps:
+  - task: Maven@3
+    inputs:
+      mavenPOMFile: "{{ Parameters.pompath }}"
+      goals: "{{ Parameters.goal }}"
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
+      javaHomeOption: 'Path'
+      jdkDirectory: "{{ Parameters.jdk_path }}"
+      mavenVersionOption: 'path'
+      mavenDirectory: "{{ Parameters.mavenpath }}"
+      
