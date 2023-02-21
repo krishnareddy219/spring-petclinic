@@ -14,7 +14,7 @@ parameters:
   - name: mavenpath
     displayName: maven-path
     type: string 
-    default: /home/ubuntu/spring-petclinic
+    default: /opt/maven
 
 steps:
   - task: Maven@3
