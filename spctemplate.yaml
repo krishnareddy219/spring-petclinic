@@ -14,16 +14,16 @@ parameters:
   - name: mavenpath
     displayName: maven-path
     type: string 
-    default: /opt/maven
+    default: /home/ubuntu/spring-petclinic
 
 steps:
   - task: Maven@3
     inputs:
-      mavenPOMFile: "{{ Parameters.pompath }}"
-      goals: "{{ Parameters.goal }}"
+      mavenPOMFile: "${{ Parameters.pompath }}"
+      goals: "${{ Parameters.goal }}"
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       javaHomeOption: 'Path'
-      jdkDirectory: "{{ Parameters.jdk_path }}"
+      jdkDirectory: "${{ Parameters.jdk_path }}"
       mavenVersionOption: 'path'
-      mavenDirectory: "{{ Parameters.mavenpath }}"
+      mavenDirectory: "${{ Parameters.mavenpath }}"
       
