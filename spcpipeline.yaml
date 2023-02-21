@@ -4,5 +4,5 @@ trigger:
   - main
 
 extends:
-  - template: spctemplate.yaml
+  template: spctemplate.yaml
 
