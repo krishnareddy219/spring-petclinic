@@ -3,6 +3,6 @@ pool:
 trigger: 
   - main
 
-jobs:
+extends:
   - template: spctemplate.yaml
 
