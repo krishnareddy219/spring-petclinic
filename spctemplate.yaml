@@ -1,4 +1,4 @@
-Parameters:
+parameters:
   - name: pompath
     displayName: pomfilepath
     type: string 
