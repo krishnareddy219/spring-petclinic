@@ -4,4 +4,8 @@ trigger:
   - main
 
 jobs:
+<<<<<<< HEAD:spcpipeline.yaml
   - template: spctemplate.yaml
+=======
+  - template: spc-template.yaml
+>>>>>>> 0b73dfc7ada04df571600446a110b04365f66dd4:spc-pipeline.yaml
