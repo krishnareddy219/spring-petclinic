@@ -1,5 +1,5 @@
 pool:
-  name: ubuntu-latest
+  name: default
 trigger: 
   - main
 
