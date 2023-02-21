@@ -2,11 +2,11 @@ Parameters:
   - name: pompath
     displayName: pomfilepath
     type: string 
-    default: pom.xml
+    default: 'pom.xml'
   - name: goal
     displayName: goal
     type: string 
-    default: package
+    default: 'package'
   - name: jdk_path
     displayName: java-path
     type: string 

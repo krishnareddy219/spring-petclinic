@@ -4,4 +4,4 @@ trigger:
   - main
 
 jobs:
-- template: spc-template.yaml
+  - template: spc-template.yaml
