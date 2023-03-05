@@ -1,0 +1,11 @@
+node('java8_krishna')
+{ 
+   stage('version control system')
+   {
+   git 'https://github.com/krishnareddy219/spring-petclinic.git'
+   }
+   stage('build')
+   {
+   sh './mvnw package'
+   }
+}
