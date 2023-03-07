@@ -1,0 +1,18 @@
+pipeline {
+  agent { label 'java8_krishna' }
+  stages {
+    stage('vcs') {
+      steps {
+        git url: 'https://github.com/krishnareddy219/spring-petclinic.git'
+        
+            } 
+    }
+    stage('build') {
+      steps {
+        sh './mvnw package'
+            }
+          }
+     } 
+}
+   
+ 
