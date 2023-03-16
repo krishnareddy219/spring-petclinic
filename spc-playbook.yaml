@@ -17,7 +17,7 @@
          Description=Manage Java service
 
          [Service]
-         WorkingDirectory=/spc
+         WorkingDirectory=/home/ubuntu/spc
          ExecStart=java -jar spring-petclinic-3.0.0-SNAPSHOT.jar
          Type=simple
          Restart=on-failure
