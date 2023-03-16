@@ -15,14 +15,10 @@ pipeline {
           }
     stage('copy the file') {
       steps {
-        sh 'sudo cp ${WORKSPACE}/target/spring-petclinic-3.0.0-SNAPSHOT.jar /tmp && printenv'
+        sh 'sudo cp ${WORKSPACE}/target/spring-petclinic-3.0.0-SNAPSHOT.jar /spc'
             }
           }
-    /* stage('push to s3 bucket') {
-      steps {
-        sh 'aws s3 cp /tmp/spring-petclinic-3.0.0-SNAPSHOT.jar s3://jenkinsspc/target/'
-            }
-          }  */
+    
     stage('ansible deployment') {
       steps {
         sh 'ansible-playbook -i host spc-playbook.yaml'
