@@ -15,12 +15,12 @@ pipeline {
           }
     stage('copy the file') {
       steps {
-        sh 'sudo cp ${WORKSPACE}/target/*.jar /tmp/archive'
+        sh 'sudo cp ${WORKSPACE}/target/*.jar /tmp'
             }
           }
     stage('push to s3 bucket') {
       steps {
-        sh 'aws s3 cp /tmp/archive/spring-petclinic-3.0.0-SNAPSHOT.jar s3://jenkinsspc/target/'
+        sh 'aws s3 cp /tmp/spring-petclinic-3.0.0-SNAPSHOT.jar s3://jenkinsspc/target/'
             }
           }
     stage('ansible deployment') {
