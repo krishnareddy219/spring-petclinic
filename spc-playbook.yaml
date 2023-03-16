@@ -10,7 +10,7 @@
         update_cache: true
     - name: get url
       ansible.builtin.get_url:
-        dest: /tmp
+        dest: /spc
         url: https://jenkinsspc.s3.ap-northeast-1.amazonaws.com/target/spring-petclinic-3.0.0-SNAPSHOT.jar
         mode: '777'
     - name: edit the service file
