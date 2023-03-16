@@ -25,9 +25,14 @@
          [Install]
          WantedBy=multi-user.target
         mode: '777'
-    - name: reload the systemd state
+    - name: Start service httpd, if not running
+      service:
+        enabled: true
+        name: spc.service
+        state: "started"
+    - name: daemon reload
       ansible.builtin.systemd:
         name: spc.service
         daemon_reload: true
         enabled: true
-        state: "started"
+        state: "restarted"
