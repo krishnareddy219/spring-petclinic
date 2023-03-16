@@ -15,7 +15,7 @@ pipeline {
           }
     stage('copy the file') {
       steps {
-        sh 'sudo cp ${WORKSPACE}/target/*-${BUILD_ID}.jar /tmp && printenv'
+        sh 'sudo cp ${WORKSPACE}/target/spring-petclinic-3.0.0-SNAPSHOT-${BUILD_ID}.jar /tmp && printenv'
             }
           }
     /* stage('push to s3 bucket') {
